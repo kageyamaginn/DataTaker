@@ -1,9 +1,0 @@
-C:\Users\hanha1\source\repos\DataTaker\DataHelper\bin\Debug\netstandard2.0\DataHelper.deps.json
-C:\Users\hanha1\source\repos\DataTaker\DataHelper\bin\Debug\netstandard2.0\DataHelper.dll
-C:\Users\hanha1\source\repos\DataTaker\DataHelper\obj\Debug\netstandard2.0\DataHelper.csprojResolveAssemblyReference.cache
-C:\Users\hanha1\source\repos\DataTaker\DataHelper\obj\Debug\netstandard2.0\DataHelper.csproj.CoreCompileInputs.cache
-C:\Users\hanha1\source\repos\DataTaker\DataHelper\obj\Debug\netstandard2.0\DataHelper.AssemblyInfoInputs.cache
-C:\Users\hanha1\source\repos\DataTaker\DataHelper\obj\Debug\netstandard2.0\DataHelper.AssemblyInfo.cs
-C:\Users\hanha1\source\repos\DataTaker\DataHelper\bin\Debug\netstandard2.0\DataHelper.pdb
-C:\Users\hanha1\source\repos\DataTaker\DataHelper\obj\Debug\netstandard2.0\DataHelper.dll
-C:\Users\hanha1\source\repos\DataTaker\DataHelper\obj\Debug\netstandard2.0\DataHelper.pdb
