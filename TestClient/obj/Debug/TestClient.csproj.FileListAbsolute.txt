@@ -1,0 +1,12 @@
+C:\Users\hanha1\source\repos\DataTaker\TestClient\bin\Debug\TestClient.exe.config
+C:\Users\hanha1\source\repos\DataTaker\TestClient\bin\Debug\TestClient.exe
+C:\Users\hanha1\source\repos\DataTaker\TestClient\bin\Debug\TestClient.pdb
+C:\Users\hanha1\source\repos\DataTaker\TestClient\bin\Debug\DbDataHelper.dll
+C:\Users\hanha1\source\repos\DataTaker\TestClient\bin\Debug\DbDataHelper.pdb
+C:\Users\hanha1\source\repos\DataTaker\TestClient\obj\Debug\TestClient.csprojResolveAssemblyReference.cache
+C:\Users\hanha1\source\repos\DataTaker\TestClient\obj\Debug\TestClient.csproj.CoreCompileInputs.cache
+C:\Users\hanha1\source\repos\DataTaker\TestClient\obj\Debug\TestClient.csproj.CopyComplete
+C:\Users\hanha1\source\repos\DataTaker\TestClient\obj\Debug\TestClient.exe
+C:\Users\hanha1\source\repos\DataTaker\TestClient\obj\Debug\TestClient.pdb
+C:\Users\hanha1\source\repos\DataTaker\TestClient\bin\Debug\tnsnames.ora
+C:\Users\hanha1\source\repos\DataTaker\TestClient\bin\Debug\Oracle.ManagedDataAccess.dll

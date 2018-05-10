@@ -1,0 +1,6 @@
+C:\Users\hanha1\source\repos\DataTaker\DbDataHelper\bin\Debug\DbDataHelper.dll
+C:\Users\hanha1\source\repos\DataTaker\DbDataHelper\bin\Debug\DbDataHelper.pdb
+C:\Users\hanha1\source\repos\DataTaker\DbDataHelper\obj\Debug\DbDataHelper.csprojResolveAssemblyReference.cache
+C:\Users\hanha1\source\repos\DataTaker\DbDataHelper\obj\Debug\DbDataHelper.csproj.CoreCompileInputs.cache
+C:\Users\hanha1\source\repos\DataTaker\DbDataHelper\obj\Debug\DbDataHelper.dll
+C:\Users\hanha1\source\repos\DataTaker\DbDataHelper\obj\Debug\DbDataHelper.pdb
