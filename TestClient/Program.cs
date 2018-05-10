@@ -23,7 +23,9 @@ namespace TestClient
             for (int attIndex = 0; attIndex < atts.Count(); attIndex++)
             {
                 Type attType = atts[attIndex].GetType();
-                
+                MethodInfo mi = attType.GetMethod("ToSql");
+
+                String sqlString= mi.Invoke(atts[attIndex], new object[] { t}) .ToString();
 
             }
             
