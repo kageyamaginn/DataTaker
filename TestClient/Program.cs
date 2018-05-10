@@ -12,23 +12,41 @@ namespace TestClient
     {
         static void Main(string[] args)
         {
-           
             Table t = new Table();
             t.TableName = "SNT_FI_AUDIT";
             t.Owner = "PLM";
 
-            Type tableType = typeof(Table);
+            Console.WriteLine(AnalysisAttribute(t));
 
-            List<Attribute> atts = tableType.GetCustomAttributes().ToList() ;
+            Owner o = new Owner();
+            Console.WriteLine(AnalysisAttribute(o));
+
+            Column c = new Column();
+            c.Owner = "PLM";
+            c.TableName = "SNT_FI_AUDIT";
+            Console.WriteLine(AnalysisAttribute(c));
+            
+
+            Console.ReadKey();
+
+        }
+
+
+        static String AnalysisAttribute(object o)
+        {
+            Type tableType = o.GetType();
+            String sql = "";
+            List<Attribute> atts = tableType.GetCustomAttributes().ToList();
             for (int attIndex = 0; attIndex < atts.Count(); attIndex++)
             {
                 Type attType = atts[attIndex].GetType();
                 MethodInfo mi = attType.GetMethod("ToSql");
 
-                String sqlString= mi.Invoke(atts[attIndex], new object[] { t}) .ToString();
+                sql += " " + mi.Invoke(atts[attIndex], new object[] { o }).ToString();
 
             }
-            
+
+            return sql;
         }
     }
 }

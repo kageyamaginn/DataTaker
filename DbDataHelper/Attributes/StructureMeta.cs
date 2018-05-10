@@ -8,12 +8,14 @@ namespace DbDataHelper.Attributes
     [AttributeUsage( AttributeTargets.Class, AllowMultiple =true)]
     public class StructureMetaAttribute:Attribute, ISqlCreator
     {
-        public StructureMetaAttribute(String sqlString)
+        public StructureMetaAttribute(String sqlString,bool returnList=false)
         {
             this.SqlString = sqlString;
+            this.ReturnList = returnList;
         }
 
         public String SqlString { get; set; }
+        public bool ReturnList { get; set; }
 
         public string ToSql(object sender)
         {
@@ -21,10 +23,23 @@ namespace DbDataHelper.Attributes
         }
     }
 
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+    public class Where : Attribute, ISqlCreator
+    {
+        public String SqlString { get; set; }
+
+        public string ToSql(object sender)
+        {
+            return "WHERE";
+        }
+    }
+
+
     public interface ISqlCreator
     {
         String ToSql(object sender);
     }
+
 
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     public class StructureConditionMetaAttribute : Attribute,ISqlCreator
@@ -44,11 +59,7 @@ namespace DbDataHelper.Attributes
         public string ToSql(object sender)
         {
             String cs = ConditionString;
-            if (sender.GetType() != typeof(DbDataHelper.Oracle.Table))
-            {
-                throw new Exception("");
-            }
-            DbDataHelper.Oracle.Table table = (sender as DbDataHelper.Oracle.Table);
+            
 
             Regex propertyReg = new Regex("\\{THIS\\.\\w+\\}");
             foreach (Match m in propertyReg.Matches(cs))
@@ -56,8 +67,8 @@ namespace DbDataHelper.Attributes
                 String propertyName= m.Value.Replace("{THIS.", "");
                 propertyName = propertyName.Replace("}", "");
 
-                String replaceM = m.Result(typeof(DbDataHelper.Oracle.Table).GetProperty(propertyName).GetValue(sender).ToString());
-                System.Reflection.PropertyInfo pi = typeof(DbDataHelper.Oracle.Table).GetProperty(propertyName);
+                String replaceM = m.Result(sender.GetType().GetProperty(propertyName).GetValue(sender).ToString());
+                System.Reflection.PropertyInfo pi =sender.GetType().GetProperty(propertyName);
                 switch (pi.PropertyType.Name)
                 {
                     case "String":
@@ -70,7 +81,7 @@ namespace DbDataHelper.Attributes
             }
             //typeof(DbDataHelper.Oracle.Table).GetProperty("")
             //ConditionString = 
-            return String.Format("{0} {1}", ClauseKey, cs);
+            return String.Format("{0}", cs);
         }
     }
 
@@ -81,7 +92,7 @@ namespace DbDataHelper.Attributes
     {
         public string ToSql(object sender)
         {
-            throw new NotImplementedException();
+            return "OR";
         }
     }
 
@@ -90,36 +101,42 @@ namespace DbDataHelper.Attributes
     {
         public string ToSql(object sender)
         {
-            throw new NotImplementedException();
+            return "AND";
         }
     }
 
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-    public class NOT : Attribute, ISqlCreator
+    public class RANGE_START : Attribute, ISqlCreator
     {
+        public RANGE_START(int rangeId)
+        {
+            this.RangeId = rangeId;
+        }
+        public int RangeId { get; set; }
         public string ToSql(object sender)
         {
-            throw new NotImplementedException();
+            return "(";
         }
     }
 
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-    public class LIKE : Attribute, ISqlCreator
+    public class RANGE_END : Attribute, ISqlCreator
     {
+        public RANGE_END(int rangeId)
+        {
+            this.RangeId = rangeId;
+        }
+        public int RangeId { get; set; }
         public string ToSql(object sender)
         {
-            throw new NotImplementedException();
+            return ")";
         }
     }
 
-    [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-    public class IN : Attribute, ISqlCreator
-    {
-        public string ToSql(object sender)
-        {
-            throw new NotImplementedException();
-        }
-    }
+
+
+
+
 
     #endregion
 

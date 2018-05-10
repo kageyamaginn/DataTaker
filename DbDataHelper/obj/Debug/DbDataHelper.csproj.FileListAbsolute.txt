@@ -4,3 +4,9 @@ C:\Users\hanha1\source\repos\DataTaker\DbDataHelper\obj\Debug\DbDataHelper.cspro
 C:\Users\hanha1\source\repos\DataTaker\DbDataHelper\obj\Debug\DbDataHelper.csproj.CoreCompileInputs.cache
 C:\Users\hanha1\source\repos\DataTaker\DbDataHelper\obj\Debug\DbDataHelper.dll
 C:\Users\hanha1\source\repos\DataTaker\DbDataHelper\obj\Debug\DbDataHelper.pdb
+C:\Users\ginn\Documents\GitHub\DataTaker\DbDataHelper\bin\Debug\DbDataHelper.dll
+C:\Users\ginn\Documents\GitHub\DataTaker\DbDataHelper\bin\Debug\DbDataHelper.pdb
+C:\Users\ginn\Documents\GitHub\DataTaker\DbDataHelper\obj\Debug\DbDataHelper.csprojResolveAssemblyReference.cache
+C:\Users\ginn\Documents\GitHub\DataTaker\DbDataHelper\obj\Debug\DbDataHelper.csproj.CoreCompileInputs.cache
+C:\Users\ginn\Documents\GitHub\DataTaker\DbDataHelper\obj\Debug\DbDataHelper.dll
+C:\Users\ginn\Documents\GitHub\DataTaker\DbDataHelper\obj\Debug\DbDataHelper.pdb
